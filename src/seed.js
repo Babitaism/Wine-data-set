@@ -1,20 +1,5 @@
 const data = [
-  {
-    Alcohol: 10,
-    "Malic Acid": 14.23,
-    Ash: 1.71,
-    "Alcalinity of ash": 2.43,
-    Magnesium: 15.6,
-    "Total phenols": 127,
-    Flavanoids: 2.8,
-    "Nonflavanoid phenols": 3.06,
-    Proanthocyanins: ".28",
-    "Color intensity": 2.29,
-    Hue: 5.64,
-    "OD280/OD315 of diluted wines": 1.04,
-    Unknown: 3.92,
-  },
-
+ 
   {
     Alcohol: 1,
     "Malic Acid": 14.23,

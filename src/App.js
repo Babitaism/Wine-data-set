@@ -26,8 +26,11 @@ function App() {
     let gammaResp = {};
     for (let i in groupedByData) {
       let gamma = groupedByData[i].map((r) => {
-        return parseFloat((r["Ash"] * r["Hue"]) / r["Magnesium"]);
+        return parseFloat((r["Ash"] * r["Hue"]) / r["Magnesium"]).toFixed(3);
       });
+
+      // console.log(gamma, i)
+
 
       gammaResp[i] = {};
       gammaResp[i]["Gamma"] = {};

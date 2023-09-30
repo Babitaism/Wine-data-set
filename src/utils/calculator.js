@@ -43,7 +43,10 @@ class Calculator {
   };
 
   median = (arrayData) => {
-    const sortedData = arrayData.sort();
+
+    let  sortedData = new Set(arrayData.sort((a,b)=>(a-b)));
+    sortedData = Array.from(sortedData).map((t) => parseFloat(t))
+
     const totalElements = sortedData.length;
 
     if (totalElements == 1) {
@@ -55,11 +58,12 @@ class Calculator {
       let firstMidTerm = totalElements / 2;
       let secondMidTerm = firstMidTerm + 1;
       calculatedmedian =
-        (sortedData[firstMidTerm] + sortedData[secondMidTerm]) / 2;
+        (sortedData[firstMidTerm-1] + sortedData[secondMidTerm-1]) / 2;
     } else {
       let midTerm = (totalElements + 1) / 2;
-      calculatedmedian = sortedData[midTerm];
+      calculatedmedian = sortedData[midTerm-1];
     }
+
     return parseFloat(calculatedmedian).toFixed(3);
   };
 
